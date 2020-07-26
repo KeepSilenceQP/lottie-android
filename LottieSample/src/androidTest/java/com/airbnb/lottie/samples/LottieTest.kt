@@ -290,7 +290,7 @@ class LottieTest {
     }
 
     private suspend fun snapshotScaleTypes() = withContext(Dispatchers.Main) {
-        withAnimationView("LottieLogo1.json", "Scale Types", "Wrap Content") { animationView ->
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "Wrap Content") { animationView ->
             animationView.progress = 1f
             animationView.updateLayoutParams {
                 width = ViewGroup.LayoutParams.WRAP_CONTENT
@@ -298,7 +298,7 @@ class LottieTest {
             }
         }
 
-        withAnimationView("LottieLogo1.json", "Scale Types", "Match Parent") { animationView ->
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "Match Parent") { animationView ->
             animationView.progress = 1f
             animationView.updateLayoutParams {
                 width = ViewGroup.LayoutParams.MATCH_PARENT
@@ -306,7 +306,7 @@ class LottieTest {
             }
         }
 
-        withAnimationView("LottieLogo1.json", "Scale Types", "300x300@2x") { animationView ->
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "300x300@2x") { animationView ->
             animationView.progress = 1f
             animationView.updateLayoutParams {
                 width = 300.dp.toInt()
@@ -315,7 +315,7 @@ class LottieTest {
             animationView.scale = 2f
         }
 
-        withAnimationView("LottieLogo1.json", "Scale Types", "300x300@4x") { animationView ->
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "300x300@4x") { animationView ->
             animationView.progress = 1f
             animationView.updateLayoutParams {
                 width = 300.dp.toInt()
@@ -324,7 +324,7 @@ class LottieTest {
             animationView.scale = 4f
         }
 
-        withAnimationView("LottieLogo1.json", "Scale Types", "300x300 centerCrop") { animationView ->
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "300x300 centerCrop") { animationView ->
             animationView.progress = 1f
             animationView.updateLayoutParams {
                 width = 300.dp.toInt()
@@ -333,7 +333,7 @@ class LottieTest {
             animationView.scaleType = ImageView.ScaleType.CENTER_CROP
         }
 
-        withAnimationView("LottieLogo1.json", "Scale Types", "300x300 centerInside") { animationView ->
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "300x300 centerInside") { animationView ->
             animationView.progress = 1f
             animationView.updateLayoutParams {
                 width = 300.dp.toInt()
@@ -342,7 +342,27 @@ class LottieTest {
             animationView.scaleType = ImageView.ScaleType.CENTER_INSIDE
         }
 
-        withAnimationView("LottieLogo1.json", "Scale Types", "300x300 centerInside @2x") { animationView ->
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "300x300 fitXY") { animationView ->
+            animationView.progress = 1f
+            animationView.updateLayoutParams {
+                width = 300.dp.toInt()
+                height = 300.dp.toInt()
+            }
+            animationView.scaleType = ImageView.ScaleType.FIT_XY
+        }
+
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "300x300 fitXY DisableExtraScale") {
+            animationView ->
+            animationView.progress = 1f
+            animationView.updateLayoutParams {
+                width = 300.dp.toInt()
+                height = 300.dp.toInt()
+            }
+            animationView.disableExtraScaleModeInFitXY()
+            animationView.scaleType = ImageView.ScaleType.FIT_XY
+        }
+
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "300x300 centerInside @2x") { animationView ->
             animationView.progress = 1f
             animationView.updateLayoutParams {
                 width = 300.dp.toInt()
@@ -352,7 +372,7 @@ class LottieTest {
             animationView.scale = 2f
         }
 
-        withAnimationView("LottieLogo1.json", "Scale Types", "300x300 centerCrop @2x") { animationView ->
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "300x300 centerCrop @2x") { animationView ->
             animationView.progress = 1f
             animationView.updateLayoutParams {
                 width = 300.dp.toInt()
@@ -362,7 +382,7 @@ class LottieTest {
             animationView.scale = 2f
         }
 
-        withAnimationView("LottieLogo1.json", "Scale Types", "600x300 centerInside") { animationView ->
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "600x300 centerInside") { animationView ->
             animationView.progress = 1f
             animationView.updateLayoutParams {
                 width = 600.dp.toInt()
@@ -371,13 +391,51 @@ class LottieTest {
             animationView.scaleType = ImageView.ScaleType.CENTER_INSIDE
         }
 
-        withAnimationView("LottieLogo1.json", "Scale Types", "300x600 centerInside") { animationView ->
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "600x300 fitXY") { animationView ->
+            animationView.progress = 1f
+            animationView.updateLayoutParams {
+                width = 600.dp.toInt()
+                height = 300.dp.toInt()
+            }
+            animationView.scaleType = ImageView.ScaleType.FIT_XY
+        }
+
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "600x300 fitXY DisableExtraScale") { animationView ->
+            animationView.progress = 1f
+            animationView.updateLayoutParams {
+                width = 600.dp.toInt()
+                height = 300.dp.toInt()
+            }
+            animationView.disableExtraScaleModeInFitXY()
+            animationView.scaleType = ImageView.ScaleType.FIT_XY
+        }
+
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "300x600 centerInside") { animationView ->
             animationView.progress = 1f
             animationView.updateLayoutParams {
                 width = 300.dp.toInt()
                 height = 600.dp.toInt()
             }
             animationView.scaleType = ImageView.ScaleType.CENTER_INSIDE
+        }
+
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "300x600 fitXY") { animationView ->
+            animationView.progress = 1f
+            animationView.updateLayoutParams {
+                width = 300.dp.toInt()
+                height = 600.dp.toInt()
+            }
+            animationView.scaleType = ImageView.ScaleType.FIT_XY
+        }
+
+        withAnimationView("Lottie Logo 1.json", "Scale Types", "300x600 fitXY DisableExtraScale") { animationView ->
+            animationView.progress = 1f
+            animationView.updateLayoutParams {
+                width = 300.dp.toInt()
+                height = 600.dp.toInt()
+            }
+            animationView.disableExtraScaleModeInFitXY()
+            animationView.scaleType = ImageView.ScaleType.FIT_XY
         }
     }
 
@@ -670,6 +728,14 @@ class LottieTest {
             drawable.addValueCallback(KeyPath("Linear", "Rectangle", "Gradient Fill"), LottieProperty.OPACITY, value)
         }
 
+        withDrawable("Tests/MatteTimeStretchScan.json", "Mirror animation", "Mirror animation") {
+            drawable ->
+            drawable.addValueCallback(KeyPath.COMPOSITION, LottieProperty.TRANSFORM_ANCHOR_POINT,
+                    { PointF(drawable.bounds.width().toFloat(), 0f) })
+            drawable.addValueCallback(KeyPath.COMPOSITION, LottieProperty.TRANSFORM_SCALE,
+                    { ScaleXY(-1.0f, 1.0f) })
+        }
+
         withDrawable("Tests/Text.json", "Text", "Text Fill (Blue -> Green)") { drawable ->
             val value = object : LottieValueCallback<Int>() {
                 override fun getValue(frameInfo: LottieFrameInfo<Int>?) = Color.GREEN
@@ -690,6 +756,20 @@ class LottieTest {
             }
             drawable.addValueCallback(KeyPath("Text"), LottieProperty.STROKE_WIDTH, value)
         }
+
+        withDrawable("Tests/Text.json", "Text", "Text Tracking") { drawable ->
+            val value = object : LottieValueCallback<Float>() {
+                override fun getValue(frameInfo: LottieFrameInfo<Float>?) = 20f
+            }
+            drawable.addValueCallback(KeyPath("Text"), LottieProperty.TEXT_TRACKING, value)
+        }
+
+        withDrawable("Tests/Text.json", "Text", "Text Size") { drawable ->
+            val value = object : LottieValueCallback<Float>() {
+                override fun getValue(frameInfo: LottieFrameInfo<Float>?) = 60f
+            }
+            drawable.addValueCallback(KeyPath("Text"), LottieProperty.TEXT_SIZE, value)
+        }
     }
 
     private suspend fun <T> testDynamicProperty(name: String, keyPath: KeyPath, property: T, callback: LottieValueCallback<T>, progress: Float = 0f) {
@@ -707,6 +787,26 @@ class LottieTest {
 
         withDrawable("Tests/Marker.json", "Marker", "endFrame") { drawable ->
             drawable.setMinAndMaxFrame("Marker A")
+            drawable.frame = drawable.maxFrame.toInt()
+        }
+
+        withDrawable("Tests/RGBMarker.json", "Marker", "->[Green, Blue)") { drawable ->
+            drawable.setMinAndMaxFrame("Green Section", "Blue Section", false)
+            drawable.frame = drawable.minFrame.toInt()
+        }
+
+        withDrawable("Tests/RGBMarker.json", "Marker", "->[Green, Blue]") { drawable ->
+            drawable.setMinAndMaxFrame("Green Section", "Blue Section", true)
+            drawable.frame = drawable.minFrame.toInt()
+        }
+
+        withDrawable("Tests/RGBMarker.json", "Marker", "[Green, Blue)<-") { drawable ->
+            drawable.setMinAndMaxFrame("Green Section", "Blue Section", false)
+            drawable.frame = drawable.maxFrame.toInt()
+        }
+
+        withDrawable("Tests/RGBMarker.json", "Marker", "[Green, Blue]<-") { drawable ->
+            drawable.setMinAndMaxFrame("Green Section", "Blue Section", true)
             drawable.frame = drawable.maxFrame.toInt()
         }
     }
